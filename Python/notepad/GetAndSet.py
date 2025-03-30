@@ -6,15 +6,15 @@ def create_widget(parent, widget_type, **option):
 root = create_widget(None, Tk)
 enter_text = create_widget(root, Frame)
 text = create_widget(root, Text)
-menubar = create_widget(root,Menu)
+menubar = create_widget(root, Menu)
 file_menu = create_widget(menubar, Menu, tearoff = 0)
         
 class var:
     def set_root(tkinter):
          root = tkinter
          
-    def set_MenuBar(Frame):
-         ribbon = Frame
+    def set_MenuBar(Menu):
+         menubar = Menu
 
     def set_text(Text):
          text = Text

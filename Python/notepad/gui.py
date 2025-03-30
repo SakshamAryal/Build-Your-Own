@@ -1,13 +1,12 @@
 from GetAndSet import var
 from tkinter import *
+from action import act
 
 class gui_struct:
     def _init_(self) -> None:
         
-        self.Root()
-        self.MenuBar()
         self.Text()
-        self.File_Menu()
+        self.Root() 
     
     # halfway done
     def Root(self):
@@ -21,11 +20,15 @@ class gui_struct:
         self.menubar = var.get_MenuBar()
         self.menubar.add_cascade(label = "File", menu = self.File_Menu())
         var.set_MenuBar(self.menubar)
-        return self.MenuBar
+        return self.menubar
 
     def File_Menu(self):
         self.menu = var.get_FileMenu()
-        self.menu.add_command(label = "New", command = None)
+        self.menu.add_command(label = "New Window", command = None)
+        self.menu.add_command(label = "Open", command = None)
+        self.menu.add_command(label = "Save", command = None)
+        self.menu.add_command(label = "Save As", command = act.saveas)
+        self.menu.add_command(label = "CLose", command = self.root.destroy)
         var.set_FileMenu(self.menu)
         return self.menu
     
@@ -33,6 +36,3 @@ class gui_struct:
         self.text = var.get_text()
         self.text.pack(fill = "both", expand = "true")
         var.set_text(self.text)
-    
-    
-        
