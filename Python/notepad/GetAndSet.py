@@ -8,7 +8,6 @@ enter_text = create_widget(root, Frame)
 text = create_widget(root, Text)
 menubar = create_widget(root, Menu)
 file_menu = create_widget(menubar, Menu, tearoff = 0)
-        
 class var:
     def set_root(tkinter):
          root = tkinter
