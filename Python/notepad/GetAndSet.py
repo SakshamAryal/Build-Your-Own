@@ -8,7 +8,9 @@ enter_text = create_widget(root, Frame)
 text = create_widget(root, Text)
 menubar = create_widget(root, Menu)
 file_menu = create_widget(menubar, Menu, tearoff = 0)
+
 class var:
+    file_name = None
     def set_root(tkinter):
          root = tkinter
          
@@ -20,6 +22,9 @@ class var:
 
     def set_FileMenu(Menu):
          file_menu = Menu
+     
+    def set_Filename(self,file_name):
+         self.file_name = file_name
 
     def get_FileMenu():
          return file_menu
@@ -35,3 +40,6 @@ class var:
  
     def get_MenuBar():
          return menubar
+    @classmethod
+    def get_Filename(self):
+         return self.file_name
