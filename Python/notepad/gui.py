@@ -24,6 +24,7 @@ class gui_struct:
 
     def File_Menu(self):
         self.menu = var.get_FileMenu()
+        self.filename = var.get_Filename()
         self.menu.add_command(label = "New Window", command = None)
         self.menu.add_command(label = "Open", command = act.open)
         self.menu.add_command(label = "Save", command = act.save)
