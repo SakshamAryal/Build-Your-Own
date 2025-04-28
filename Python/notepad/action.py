@@ -48,3 +48,4 @@ class act:
             file1 = open(filename, "w")
             file1.write(text)
             file1.close()
+    

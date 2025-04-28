@@ -37,3 +37,6 @@ class gui_struct:
         self.text = var.get_text()
         self.text.pack(fill = "both", expand = "true")
         var.set_text(self.text)
+
+    def New_Window(self):
+        self.window = var.get_NewWindow()
